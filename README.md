@@ -1,5 +1,5 @@
 ## Step-By-Step
-Any suggestions please send mail to frankdevhub@163.com , thanks :)
+Any suggestion please send mail to frankdevhub@163.com , thanks :)
 
 ### Guide History
 
