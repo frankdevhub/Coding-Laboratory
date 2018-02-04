@@ -1,0 +1,118 @@
+body { font-family: 'Roboto'; padding: 10px; }
+.flex { margin: 30px auto 20px; max-width: 768px; }
+
+.slides,.slides--titles {
+	margin:0;
+	padding:0
+}
+.slides li,.slides--titles li {
+	overflow:hidden;
+	position:relative;
+	float:left
+}
+.jFlex,.slides,.slides li,.slides--titles li {
+	position:relative
+}
+.jFlex {
+	overflow:hidden;
+	-webkit-touch-callout:none;
+	-webkit-user-select:none;
+	-khtml-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none
+}
+.slides {
+	list-style:none
+}
+.slides--anim {
+	-moz-transition:transform ease-out .3s;
+	-ms-transition:transform ease-out .3s;
+	-o-transition:transform ease-out .3s;
+	-webkit-transition:transform ease-out .3s;
+	transition:transform ease-out .3s
+}
+.slides--titles:after,.slides--titles:before,.slides:after,.slides:before {
+	content:' ';
+	display:table
+}
+.slides--titles:after,.slides:after {
+	clear:both
+}
+.slides li {
+	display:block
+}
+.slides img {
+	display:block;
+	height:auto;
+	max-width:100%
+}
+.slides--titles li {
+	background:#eee;
+	cursor:pointer;
+	text-align:center;
+	-moz-transition:background linear .3s;
+	-ms-transition:background linear .3s;
+	-o-transition:background linear .3s;
+	-webkit-transition:background linear .3s;
+	transition:background linear .3s;
+	width:33.33333%
+}
+.jflex--2 li {
+	width:50%
+}
+.jflex--3 li {
+	width:33.3333333%
+}
+.jflex--4 li {
+	width:25%
+}
+.jflex--5 li {
+	width:20%
+}
+.jflex--6 li {
+	width:16.6666667%
+}
+.slides--titles li .title--l {
+	background:#555;
+	display:block;
+	height:4px;
+	left:-100%;
+	position:relative
+}
+.slides--titles li .title--t {
+	color:#333;
+	display:block;
+	height:50px;
+	line-height:50px;
+	padding:0 10px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap
+}
+.slides--titles li.title--auto .title--l,.slides--titles li.title--manual .title--l {
+	-moz-transition:all linear .3s;
+	-ms-transition:all linear .3s;
+	-o-transition:all linear .3s;
+	-webkit-transition:all linear .3s;
+	transition:all linear .3s
+}
+.slides--titles li.title--auto.title--active .title--l {
+	-moz-transition:all linear 5s;
+	-ms-transition:all linear 5s;
+	-o-transition:all linear 5s;
+	-webkit-transition:all linear 5s;
+	transition:all linear 5s
+}
+.slides--titles li.title--active .title--l {
+	left:0
+}
+.slides--titles li.title--right .title--l {
+	left:100%
+}
+.slides--titles li.title--active .title--t {
+	font-weight:700
+}
+.slides--titles li.title--active {
+	background:#ddd
+}
