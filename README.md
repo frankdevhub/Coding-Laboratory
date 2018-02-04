@@ -18,3 +18,5 @@ Any suggestion please send mail to frankdevhub@163.com , thanks :)
 * 2018-01-30 js素材库
 
 * 2018-02-04 01:16 Vue配置jquery（http://www.jb51.net/article/119700.htm?utm_source=debugrun&utm_medium=referral)
+
+* 2018-02-04 23:41 Vue-demo-notepad（https://github.com/frankdevhub/Step-By-Step/tree/master/201801300000_WebApps/vue-work/vue-demo-noteboard)
