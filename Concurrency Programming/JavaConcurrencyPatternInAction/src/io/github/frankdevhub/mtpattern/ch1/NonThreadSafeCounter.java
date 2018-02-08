@@ -11,27 +11,22 @@ https://github.com/Viscent/javamtp
 http://www.broadview.com.cn/27006
 */
 
-package io.github.viscent.mtpattern.ch1;
+package io.github.frankdevhub.mtpattern.ch1;
 
 /**
- * 线程安全的计数器。
+ * 非线程安全的计数器。
  * 
  * @author Viscent Huang
  *
  */
-public class ThreadSafeCounter {
+public class NonThreadSafeCounter {
 	private int counter = 0;
 
 	public void increment() {
-		synchronized (this) {
-			counter++;
-		}
+		counter++;
 	}
 
 	public int get() {
-		synchronized (this) {
-			return counter;
-		}
-
+		return counter;
 	}
 }

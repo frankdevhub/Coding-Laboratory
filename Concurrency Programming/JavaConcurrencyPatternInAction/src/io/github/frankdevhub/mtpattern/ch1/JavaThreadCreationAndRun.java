@@ -11,7 +11,7 @@ https://github.com/Viscent/javamtp
 http://www.broadview.com.cn/27006
 */
 
-package io.github.viscent.mtpattern.ch1;
+package io.github.frankdevhub.mtpattern.ch1;
 
 public class JavaThreadCreationAndRun {
 
