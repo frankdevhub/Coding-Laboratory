@@ -5,10 +5,10 @@ package io.github.frankdevhub.core.chp1;
  *
  */
 public class SemaphoreSynMulit {
-	/**   
+	/**  
 	* Copyright: Copyright (c) 2018 fangchensheng
 	* 
-	* @ClassName: a.java
+	* @ClassName: SemaphoreSynMulit.java
 	* @Description: 该类的功能描述
 	*
 	* @version: v1.0.0
