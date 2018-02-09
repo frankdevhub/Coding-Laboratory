@@ -11,7 +11,7 @@ https://github.com/Viscent/javamtp
 http://www.broadview.com.cn/27006
 */
 
-package io.github.frankdevhub.mtpattern.ch1;
+package io.githubfrankdevhub.mtpattern.ch1;
 
 /**
  * 线程安全的计数器。
