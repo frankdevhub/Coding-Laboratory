@@ -23,7 +23,6 @@ public class SemaphoreSynSingle {
 		@Override
 		public void run() {
  			try {
- 				//请求资源
 				sph.acquire();
 				Long mark = System.currentTimeMillis();
 				System.out.println("Current Thread begin:\t"+mark);
