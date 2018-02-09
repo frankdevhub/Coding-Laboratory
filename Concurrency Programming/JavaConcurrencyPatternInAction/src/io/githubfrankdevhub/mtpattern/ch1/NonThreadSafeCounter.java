@@ -15,7 +15,7 @@ package io.githubfrankdevhub.mtpattern.ch1;
 /**
  * 非线程安全的计数器。
  * 
- * @author Viscent Huang
+ * @fangchensheng
  *
  */
 public class NonThreadSafeCounter {
