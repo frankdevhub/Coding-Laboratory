@@ -10,3 +10,5 @@ Any suggestion please send mail to frankdevhub@163.com , thanks :)
 * IText Guide 《iText插件使用用例》
 
 * WebSocket 《网络编程实践及用例》
+
+* Java Mail Application 《邮件服务》
