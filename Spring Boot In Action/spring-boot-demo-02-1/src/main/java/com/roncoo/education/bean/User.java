@@ -1,6 +1,3 @@
-/**
- * 2015-2016 龙果学院 (www.roncoo.com)
- */
 package com.roncoo.education.bean;
 
 import java.util.Date;
@@ -8,7 +5,7 @@ import java.util.Date;
 /**
  * 实体类
  * 
- * @author wujing
+ * @author fangchensheng
  */
 public class User {
 	private int id;

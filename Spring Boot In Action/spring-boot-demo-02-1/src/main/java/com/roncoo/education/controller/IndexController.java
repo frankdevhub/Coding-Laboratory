@@ -16,7 +16,7 @@ import com.roncoo.education.bean.User;
 /**
  * spring-boot-demo-2-1
  * 
- * @author wujing
+ * @author fangchensheng
  */
 @RestController
 @RequestMapping(value = "/index")
@@ -27,7 +27,6 @@ public class IndexController {
 		return "hello world";
 	}
 
-	// @RequestParam 简单类型的绑定，可以出来get和post
 	@RequestMapping(value = "/get")
 	public HashMap<String, Object> get(@RequestParam String name) {
 		HashMap<String, Object> map = new HashMap<String, Object>();
@@ -36,7 +35,6 @@ public class IndexController {
 		return map;
 	}
 
-	// @PathVariable 获得请求url中的动态参数
 	@RequestMapping(value = "/get/{id}/{name}")
 	public User getUser(@PathVariable int id, @PathVariable String name) {
 		User user = new User();
