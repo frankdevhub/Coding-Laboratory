@@ -31,7 +31,7 @@ public class SpringBootDemo21ApplicationTests {
 		RequestBuilder request = get("/index");
 		mvc.perform(request).andExpect(status().isOk()).andExpect(content().string("hello world"));
 		
-		request = get("/index/get").param("name", "无境");
+		request = get("/index/get").param("name", "test");
 		mvc.perform(request).andExpect(status().isOk()).andExpect(content().string("{\"name\":\"无境\",\"title\":\"hello world\"}"));
 	}
 
