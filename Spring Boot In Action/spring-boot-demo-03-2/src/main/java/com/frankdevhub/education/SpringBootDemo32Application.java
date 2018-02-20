@@ -1,4 +1,4 @@
-package com.roncoo.education;
+package com.frankdevhub.education;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

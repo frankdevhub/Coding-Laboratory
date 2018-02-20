@@ -1,18 +1,15 @@
-#这个优先级较高
 
-#自定义配置
-roncoo: 
+
+frankdevhub: 
   secret: ${random.value}
   number: ${random.int}
-  name: www.roncoo.com
-  desc: ${roncoo.name} is a domain name
+  name: www.frankdevhub.com
+  desc: ${frankdevhub.name} is a domain name
 
-#端口
 server: 
-  port: 8090
+    port: 8090
   
 
-#spring jsckson
 spring: 
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
