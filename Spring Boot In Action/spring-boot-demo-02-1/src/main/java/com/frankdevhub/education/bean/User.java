@@ -3,8 +3,6 @@ package com.frankdevhub.education.bean;
 import java.util.Date;
 
 /**
- * 实体类
- * 
  * @author fangchensheng
  */
 public class User {
