@@ -1,4 +1,4 @@
-package com.roncoo.education;
+package com.frankdevhub.education;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

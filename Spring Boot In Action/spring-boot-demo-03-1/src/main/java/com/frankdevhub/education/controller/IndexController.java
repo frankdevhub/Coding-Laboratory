@@ -1,7 +1,5 @@
-/**
- * 2015-2016 龙果学院 (www.roncoo.com)
- */
-package com.roncoo.education.controller;
+
+package com.frankdevhub.education.controller;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -12,12 +10,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.roncoo.education.bean.User;
+import com.frankdevhub.education.bean.User;
 
 /**
  * spring-boot-demo-3-1
  * 
- * @author wujing
+ * @author fangchensheng
  */
 @RestController
 @RequestMapping(value = "/index")
