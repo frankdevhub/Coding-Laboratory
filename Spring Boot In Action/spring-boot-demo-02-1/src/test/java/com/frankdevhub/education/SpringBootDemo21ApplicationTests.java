@@ -1,4 +1,4 @@
-package com.roncoo.education;
+package com.frankdevhub.education;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
@@ -13,7 +13,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.RequestBuilder;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
-import com.roncoo.education.controller.IndexController;
+import com.frankdevhub.education.controller.IndexController;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
