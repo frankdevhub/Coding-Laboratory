@@ -15,6 +15,7 @@ Any suggestion please send mail to frankdevhub@163.com , thanks :)
 
 * Spring Cloud & Spring Boot In Action 《Spring Cloud & Spring Boot 实战汇总》
 
+* OSS Util 《OSS资源推送》
 
 ## Donation (For Dog Food )
 
