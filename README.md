@@ -1,6 +1,6 @@
 # Coding-Laboratory
 
-## Learning, hardworking, stay Hungry? A noble qualities? 
+## Learning, hardworking, stay Hungry?  A noble qualities? 
 - Never be fooled by your Chinese Teachers.
 - We are just animals, so just think in the economical way.
 
