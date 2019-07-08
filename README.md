@@ -1,8 +1,8 @@
 # Coding-Laboratory
 
 ## Learning, hardworking, stay hungry?  The noble qualities? 
-- Avoid to raped by your local education.
-- Never be fooled by your Chinese Teachers.(應試教育Examination-Oriented Education).
+- Avoid to raped by your local education(teach you how to be a qualified slave).
+- Never be fooled by your Chinese Teachers.(應試教育-儒家思想下的奴隸制教育 Examination-Oriented Education).
 - We are just animals, so just think in the economical way.
 
 Stay sharp, graduates and freshman could be threats, no cooperation, just enemy. We show no mercy to the enemy.
