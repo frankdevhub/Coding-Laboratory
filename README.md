@@ -1,6 +1,6 @@
 # Coding-Laboratory
 
-## Learning, hardworking, stay Hungry?  The noble qualities? 
+## Learning, hardworking, stay hungry?  The noble qualities? 
 - Avoid to raped by your local education.
 - Never be fooled by your Chinese Teachers.(應試教育Examination-Oriented Education).
 - We are just animals, so just think in the economical way.
