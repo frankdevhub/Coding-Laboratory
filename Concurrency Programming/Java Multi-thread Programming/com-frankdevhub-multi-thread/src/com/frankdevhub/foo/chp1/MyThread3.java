@@ -14,16 +14,26 @@ public class MyThread3 extends Thread {
 	@Override
 	public void run() {
 		System.out.println("i=" + i-- + Thread.currentThread().getName());
+		try {
+			Thread.sleep(200);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 	}
 
 	public static void main(String[] args) {
 		MyThread3 run = new MyThread3();
-		Thread t = new Thread(run);
+		Thread t1 = new Thread(run);
 		Thread t2 = new Thread(run);
 		Thread t3 = new Thread(run);
+		Thread t4 = new Thread(run);
+		Thread t5 = new Thread(run);
 
-		t.start();
+		t1.start();
 		t2.start();
 		t3.start();
+		t4.start();
+		t5.start();
+
 	}
 }
