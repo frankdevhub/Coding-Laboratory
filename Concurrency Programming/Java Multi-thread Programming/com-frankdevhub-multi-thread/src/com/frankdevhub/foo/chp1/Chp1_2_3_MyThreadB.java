@@ -4,10 +4,10 @@ package com.frankdevhub.foo.chp1;
  * @ClassName: MyThread1
  * @author: frankdevhub@gmail.com
  * @date: 2019年10月21日 下午10:10:27
- * @description: 实例变量与线程安全(线程之间的资源共享)
+ * @description: 实例变量与线程安全(线程之间的资源共享-线程不安全)
  * @Copyright: 2019 www.frankdevhub.site Inc. All rights reserved.
  */
-public class Chp1_2_3_MyThreadA extends Thread {
+public class Chp1_2_3_MyThreadB extends Thread {
 
 	private int count = 5;
 
@@ -19,7 +19,7 @@ public class Chp1_2_3_MyThreadA extends Thread {
 	}
 
 	public static void main(String[] args) {
-		Chp1_2_3_MyThreadA myThread = new Chp1_2_3_MyThreadA();
+		Chp1_2_3_MyThreadB myThread = new Chp1_2_3_MyThreadB();
 		Thread a = new Thread(myThread, "A");
 		Thread b = new Thread(myThread, "B");
 		Thread c = new Thread(myThread, "C");
