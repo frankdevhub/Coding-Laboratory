@@ -1,0 +1,26 @@
+package com.frankdevhub.foo.chp1;
+
+/**
+ * @ClassName: Chp1_3_CurrentThread
+ * @author: frankdevhub@gmail.com
+ * @date: 2019年10月28日 上午1:29:22
+ * @description: Thread.currentThread()方法的使用
+ * @Copyright: 2019 www.frankdevhub.site Inc. All rights reserved.
+ */
+public class Chp1_3_CurrentThread extends Thread {
+
+	public Chp1_3_CurrentThread() {
+		System.out.println("[constructor]running current thread name:" + Thread.currentThread().getName());
+	}
+
+	@Override
+	public void run() {
+		System.out.println("[do run]running current thread name:" + Thread.currentThread().getName());
+	}
+
+	public static void main(String[] args) {
+		// Thread test = new Thread(new Chp1_3_CurrentThread());
+		Chp1_3_CurrentThread test = new Chp1_3_CurrentThread();
+		test.start();
+	}
+}
