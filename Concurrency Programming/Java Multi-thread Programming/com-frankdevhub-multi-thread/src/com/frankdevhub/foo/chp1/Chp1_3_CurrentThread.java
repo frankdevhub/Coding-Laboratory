@@ -21,6 +21,7 @@ public class Chp1_3_CurrentThread extends Thread {
 	public static void main(String[] args) {
 		// Thread test = new Thread(new Chp1_3_CurrentThread());
 		Chp1_3_CurrentThread test = new Chp1_3_CurrentThread();
-		test.start();
+		// test.start(); //由 test对应线程调用，返回Thread-0
+		test.run(); // 直接由main方法调用，返回main
 	}
 }
