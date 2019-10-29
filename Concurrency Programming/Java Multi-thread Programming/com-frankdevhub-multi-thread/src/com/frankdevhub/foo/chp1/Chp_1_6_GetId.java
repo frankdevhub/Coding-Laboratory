@@ -7,7 +7,7 @@ package com.frankdevhub.foo.chp1;
  * @description: getId()方法 
  * @Copyright: 2019 www.frankdevhub.site Inc. All rights reserved.
  */
-public class Ch1_6_GetId extends Thread {
+public class Chp_1_6_GetId extends Thread {
 
 	//Thread.currentThread()情况下并不会执行
 	@Override
