@@ -7,17 +7,24 @@ package com.frankdevhub.foo.chp1;
  * @description: 使用异常法停止线程
  * @Copyright: 2019 www.frankdevhub.site Inc. All rights reserved.
  */
-public class Chp1_7_3_MyThreadA extends Thread {
+public class Chp1_7_3_MyThread extends Thread {
 
 	@SuppressWarnings("static-access")
 	@Override
 	public void run() {
-		for (int i = 0; i <= 5000000; i++) {
-			if (this.interrupted()) {
-				System.out.println("current thread is interrupted");
-				break;
+		try {
+			for (int i = 0; i <= 5000000; i++) {
+				if (this.interrupted()) {
+					System.out.println("current thread is interrupted");
+					// 如果使用break函数体剩余内容仍会运行
+					throw new InterruptedException(); // 抛出异常终止
+				}
+				System.out.println("thread running,i=" + i);
 			}
-			System.out.println("thread running,i=" + i);
+			System.out.println("after loop");
+		} catch (Exception e) {
+			System.out.println("loop end and getinto catch block");
+			e.printStackTrace();
 		}
 	}
 
@@ -25,7 +32,7 @@ public class Chp1_7_3_MyThreadA extends Thread {
 	public static void main(String[] args) {
 		try {
 
-			Chp1_7_3_MyThreadA thread = new Chp1_7_3_MyThreadA();
+			Chp1_7_3_MyThread thread = new Chp1_7_3_MyThread();
 
 			thread.start();
 			thread.sleep(2000);
