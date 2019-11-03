@@ -7,10 +7,10 @@ package com.frankdevhub.foo.chp1;
  * @description: 实例变量与线程安全(线程之间的资源不共享)
  * @Copyright: 2019 www.frankdevhub.site Inc. All rights reserved.
  */
-public class Chp1_2_1_MyThread extends Thread {
+public class Chp_1_2_1_MyThread extends Thread {
 	private int count = 5;
 
-	public Chp1_2_1_MyThread(String name) {
+	public Chp_1_2_1_MyThread(String name) {
 		this.setName(name);
 	}
 
