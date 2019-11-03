@@ -7,7 +7,7 @@ package com.frankdevhub.foo.chp1;
  * @description: interrupt()方法标记线程终止但是不能中断线程
  * @Copyright: 2019 www.frankdevhub.site Inc. All rights reserved.
  */
-public class Chp1_7_1_MyThread extends Thread {
+public class Chp_1_7_1_MyThread extends Thread {
 
 	@Override
 	public void run() {
@@ -19,7 +19,7 @@ public class Chp1_7_1_MyThread extends Thread {
 
 	@SuppressWarnings("static-access")
 	public static void main(String[] args) {
-		Chp1_7_1_MyThread thread = new Chp1_7_1_MyThread();
+		Chp_1_7_1_MyThread thread = new Chp_1_7_1_MyThread();
 
 		try {
 			thread.start();

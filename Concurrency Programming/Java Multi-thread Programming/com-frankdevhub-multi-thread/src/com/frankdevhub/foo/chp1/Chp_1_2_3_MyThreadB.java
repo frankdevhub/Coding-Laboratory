@@ -7,7 +7,7 @@ package com.frankdevhub.foo.chp1;
  * @description: 实例变量与线程安全(线程之间的资源共享-线程不安全)
  * @Copyright: 2019 www.frankdevhub.site Inc. All rights reserved.
  */
-public class Chp1_2_3_MyThreadB extends Thread {
+public class Chp_1_2_3_MyThreadB extends Thread {
 
 	private int count = 5;
 
@@ -19,7 +19,7 @@ public class Chp1_2_3_MyThreadB extends Thread {
 	}
 
 	public static void main(String[] args) {
-		Chp1_2_3_MyThreadB myThread = new Chp1_2_3_MyThreadB();
+		Chp_1_2_3_MyThreadB myThread = new Chp_1_2_3_MyThreadB();
 		Thread a = new Thread(myThread, "A");
 		Thread b = new Thread(myThread, "B");
 		Thread c = new Thread(myThread, "C");

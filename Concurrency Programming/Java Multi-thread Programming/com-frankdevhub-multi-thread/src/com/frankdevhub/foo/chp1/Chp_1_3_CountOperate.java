@@ -7,7 +7,7 @@ package com.frankdevhub.foo.chp1;
  * @description: this.getName()ºÍThread.currentThread().getName()Çø±ð
  * @Copyright: 2019 www.frankdevhub.site Inc. All rights reserved.
  */
-public class Chp1_3_CountOperate extends Thread {
+public class Chp_1_3_CountOperate extends Thread {
 
 	private class Chp1_3_CountOperate_Sub extends Thread {
 		@Override
@@ -20,7 +20,7 @@ public class Chp1_3_CountOperate extends Thread {
 
 	}
 
-	public Chp1_3_CountOperate() {
+	public Chp_1_3_CountOperate() {
 		System.out.println("Chp1_3_CountOperate---begin");
 		System.out.println("Thread.currentThread().getName()=" + Thread.currentThread().getName());
 		System.out.println("this.getName()=" + this.getName());
@@ -55,7 +55,7 @@ public class Chp1_3_CountOperate extends Thread {
 	// Chp1_3_CountOperate_Sub--end
 
 	public static void main(String[] args) {
-		Chp1_3_CountOperate test = new Chp1_3_CountOperate();
+		Chp_1_3_CountOperate test = new Chp_1_3_CountOperate();
 		Thread thread = new Thread(test);
 		thread.setName("thread");
 		test.start();

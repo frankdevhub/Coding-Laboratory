@@ -7,9 +7,9 @@ package com.frankdevhub.foo.chp1;
  * @description: Thread.currentThread()方法的使用
  * @Copyright: 2019 www.frankdevhub.site Inc. All rights reserved.
  */
-public class Chp1_3_CurrentThread extends Thread {
+public class Chp_1_3_CurrentThread extends Thread {
 
-	public Chp1_3_CurrentThread() {
+	public Chp_1_3_CurrentThread() {
 		System.out.println("[constructor]running current thread name:" + Thread.currentThread().getName());
 	}
 
@@ -20,7 +20,7 @@ public class Chp1_3_CurrentThread extends Thread {
 
 	public static void main(String[] args) {
 		// Thread test = new Thread(new Chp1_3_CurrentThread());
-		Chp1_3_CurrentThread test = new Chp1_3_CurrentThread();
+		Chp_1_3_CurrentThread test = new Chp_1_3_CurrentThread();
 		// test.start(); //由 test对应线程调用，返回Thread-0
 		test.run(); // 直接由main方法调用，返回main
 	}

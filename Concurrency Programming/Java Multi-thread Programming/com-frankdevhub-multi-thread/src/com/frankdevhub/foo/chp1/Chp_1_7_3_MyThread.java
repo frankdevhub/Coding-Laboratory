@@ -7,7 +7,7 @@ package com.frankdevhub.foo.chp1;
  * @description: 使用异常法停止线程
  * @Copyright: 2019 www.frankdevhub.site Inc. All rights reserved.
  */
-public class Chp1_7_3_MyThread extends Thread {
+public class Chp_1_7_3_MyThread extends Thread {
 
 	@SuppressWarnings("static-access")
 	@Override
@@ -32,7 +32,7 @@ public class Chp1_7_3_MyThread extends Thread {
 	public static void main(String[] args) {
 		try {
 
-			Chp1_7_3_MyThread thread = new Chp1_7_3_MyThread();
+			Chp_1_7_3_MyThread thread = new Chp_1_7_3_MyThread();
 
 			thread.start();
 			thread.sleep(2000);

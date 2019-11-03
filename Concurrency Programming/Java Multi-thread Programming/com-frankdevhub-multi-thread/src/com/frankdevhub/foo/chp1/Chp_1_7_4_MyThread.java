@@ -7,7 +7,7 @@ package com.frankdevhub.foo.chp1;
  * @description:ÔÚ³ÁË¯ÖÐÍ£Ö¹
  * @Copyright: 2019 www.frankdevhub.site Inc. All rights reserved.
  */
-public class Chp1_7_4_MyThread extends Thread {
+public class Chp_1_7_4_MyThread extends Thread {
 
 	@Override
 	public void run() {
@@ -27,7 +27,7 @@ public class Chp1_7_4_MyThread extends Thread {
 	}
 
 	public static void main(String[] args) {
-		Chp1_7_4_MyThread thread = new Chp1_7_4_MyThread();
+		Chp_1_7_4_MyThread thread = new Chp_1_7_4_MyThread();
 		thread.start();
 		thread.interrupt();
 	}

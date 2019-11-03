@@ -7,7 +7,7 @@ package com.frankdevhub.foo.chp1;
  * @description: System.out.println()非线程安全
  * @Copyright: 2019 www.frankdevhub.site Inc. All rights reserved.
  */
-public class Chp1_2_4_MyThread extends Thread {
+public class Chp_1_2_4_MyThread extends Thread {
 
 	private int i = 5;
 
@@ -22,7 +22,7 @@ public class Chp1_2_4_MyThread extends Thread {
 	}
 
 	public static void main(String[] args) {
-		Chp1_2_4_MyThread run = new Chp1_2_4_MyThread();
+		Chp_1_2_4_MyThread run = new Chp_1_2_4_MyThread();
 		Thread t1 = new Thread(run);
 		Thread t2 = new Thread(run);
 		Thread t3 = new Thread(run);

@@ -7,7 +7,7 @@ package com.frankdevhub.foo.chp1;
  * @description: 强制暴力停止线程
  * @Copyright: 2019 www.frankdevhub.site Inc. All rights reserved.
  */
-public class Chp1_7_5_MyThread extends Thread {
+public class Chp_1_7_5_MyThread extends Thread {
 
 	private int i = 0;
 
@@ -27,7 +27,7 @@ public class Chp1_7_5_MyThread extends Thread {
 	}
 
 	public static void main(String[] args) throws InterruptedException {
-		Chp1_7_5_MyThread thread = new Chp1_7_5_MyThread();
+		Chp_1_7_5_MyThread thread = new Chp_1_7_5_MyThread();
 		thread.start();
 		Thread.sleep(2000);
 		thread.stop();// stop方法会抛出java.lang.ThreadDeath异常,通常情况下不需要显示地捕捉

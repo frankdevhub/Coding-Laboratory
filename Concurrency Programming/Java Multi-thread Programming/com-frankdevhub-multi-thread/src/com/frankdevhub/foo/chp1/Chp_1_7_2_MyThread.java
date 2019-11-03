@@ -7,7 +7,7 @@ package com.frankdevhub.foo.chp1;
  * @description: Thread.interrupted()多次调用的结果
  * @Copyright: 2019 www.frankdevhub.site Inc. All rights reserved.
  */
-public class Chp1_7_2_MyThread extends Thread {
+public class Chp_1_7_2_MyThread extends Thread {
 
 	public static void main(String[] args) {
 		Thread.currentThread().interrupt();
