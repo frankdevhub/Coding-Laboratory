@@ -16,6 +16,7 @@ public class Chp_1_8_2_1_Run {
 		public void run() {
 			while (true) {
 				i++;
+				//System.out.println("i=" + i);如果添加则PrintStream当前对象在打印时阻塞故主线程不能输出"end"
 			}
 		}
 	}
