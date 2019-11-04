@@ -1,5 +1,0 @@
-db.json
-.DS_Store
-*.log
-coverage
-node_modules
