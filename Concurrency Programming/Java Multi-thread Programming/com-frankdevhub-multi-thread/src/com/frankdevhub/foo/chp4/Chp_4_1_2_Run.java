@@ -4,7 +4,7 @@ package com.frankdevhub.foo.chp4;
  * @ClassName: Chp_4_1_2_Run
  * @author: frankdevhub@gmail.com
  * @date: 2019年11月6日 下午10:49:26
- * @description: 使用ReentrantLock实现同步，测试1
+ * @description: 使用ReentrantLock实现同步，测试2
  * @Copyright: 2019 www.frankdevhub.site Inc. All rights reserved.
  */
 public class Chp_4_1_2_Run {
