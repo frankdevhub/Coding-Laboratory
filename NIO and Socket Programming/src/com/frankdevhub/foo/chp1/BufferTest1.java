@@ -9,7 +9,7 @@ import java.nio.LongBuffer;
 import java.nio.ShortBuffer;
 
 /**
- * @ClassName: Test1
+ * @ClassName: BufferTest1
  * @author: frankdevhub@gmail.com
  * @date: 2019年11月6日 下午11:06:49
  * @description: 包装数据与获得容量
