@@ -76,9 +76,7 @@ public class ServerReceiveStringTest {
 			inputStream = socket.getInputStream();
 			inputStreamReader = new InputStreamReader(inputStream);
 			System.out.println("server socket read begin time=" + System.currentTimeMillis());
-			int readLength = 0;
-
-			readLength = inputStreamReader.read(charArray);
+			int readLength = inputStreamReader.read(charArray);
 			while (readLength != -1) {
 				String newString = new String(charArray, 0, readLength);
 				System.out.println(newString);
