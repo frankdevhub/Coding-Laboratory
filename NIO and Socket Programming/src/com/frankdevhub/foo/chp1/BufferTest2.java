@@ -3,7 +3,7 @@ package com.frankdevhub.foo.chp1;
 import java.nio.CharBuffer;
 
 /**
- * @ClassName: Test2
+ * @ClassName: BufferTest2
  * @author: frankdevhub@gmail.com
  * @date: 2019年11月8日 下午4:08:41
  * @description: 限制获取与设置
