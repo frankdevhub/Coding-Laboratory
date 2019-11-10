@@ -9,7 +9,7 @@ import java.nio.CharBuffer;
  * @description: 限制获取与设置
  * @Copyright: 2019 www.frankdevhub.site Inc. All rights reserved.
  */
-public class Test2 {
+public class BufferTest2 {
 	public static void main(String[] args) {
 
 		char[] charArray = new char[] { 'a', 'b', 'c', 'd', 'e' };
