@@ -1,6 +1,7 @@
 package com.frankdevhub.foo.chp1;
 
 import java.nio.ByteBuffer;
+import java.nio.CharBuffer;
 import java.nio.InvalidMarkException;
 
 /**
@@ -163,12 +164,29 @@ public class BufferTest5 {
 
 	// 6. 如果position大于新的limit，则position的值就是新limit的值
 	public static void test6() {
+		byte[] byteArray = new byte[] { 1, 2, 3 };
+		ByteBuffer byteBuffer = ByteBuffer.wrap(byteArray);
 
+		byteBuffer.position(3);
+		System.out.println("byte buffer before do limit(2): " + byteBuffer.position());
+		byteBuffer.limit(2);
+		System.out.println();
+
+		System.out.println("byte buffer after do limit(2): " + byteBuffer.position());
 	}
 
 	// 7. 当position和limit值一样时，在指定的position写入数据会出现异常，因为此位置是被限制的
 	public static void test7() {
+		char[] charArray = new char[] { 'a', 'b', 'c', 'd' };
+		CharBuffer charBuffer = CharBuffer.wrap(charArray);
 
+		System.out.println("A capacity()=" + charBuffer.capacity() + " limit()=" + charBuffer.limit() + " position()="
+				+ charBuffer.position());
+		System.out.println();
+
+		charBuffer.position(1);
+		charBuffer.limit(1);
+		charBuffer.put('z');// 此处抛出java.nio.BufferOverflowException异常
 	}
 
 	public static void main(String[] args) {
