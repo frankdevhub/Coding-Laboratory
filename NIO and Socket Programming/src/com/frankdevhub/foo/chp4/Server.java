@@ -13,6 +13,7 @@ import java.net.ServerSocket;
 public class Server {
 	public static void main(String[] args) {
 		try {
+			@SuppressWarnings("resource")
 			ServerSocket server = new ServerSocket(8090);
 			System.out.println("server acccept startTime=" + System.currentTimeMillis());
 			server.accept();
