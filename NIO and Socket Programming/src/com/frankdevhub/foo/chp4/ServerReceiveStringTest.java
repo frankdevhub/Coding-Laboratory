@@ -38,7 +38,7 @@ public class ServerReceiveStringTest {
 		}
 	}
 
-	private void serverReceiveString() throws IOException {
+	private void clientPushString() throws IOException {
 		Socket socket = null;
 		OutputStream outputStream = null;
 		try {
@@ -61,7 +61,7 @@ public class ServerReceiveStringTest {
 		}
 	}
 
-	private void clientPushString() throws IOException {
+	private void serverReceiveString() throws IOException {
 		InputStream inputStream = null;
 		InputStreamReader inputStreamReader = null;
 		ServerSocket serverSocket = null;
@@ -95,6 +95,14 @@ public class ServerReceiveStringTest {
 			serverSocket.close();
 		}
 	}
+
+	// socket begin time=1573396991820
+	// server socket accept begin time=1573396991827
+	// socket end time=1573396991845
+	// server socket accept end time=1573396991846
+	// server socket read begin time=1573396991846
+	// this is a test message from client to server
+	// server socket read end time=1573396994846
 
 	public static void main(String[] args) {
 		ServerReceiveStringTest test = new ServerReceiveStringTest();
