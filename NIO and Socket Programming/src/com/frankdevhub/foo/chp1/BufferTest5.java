@@ -1,6 +1,7 @@
 package com.frankdevhub.foo.chp1;
 
 import java.nio.ByteBuffer;
+import java.nio.InvalidMarkException;
 
 /**
  * @ClassName: BufferTest5
@@ -46,12 +47,25 @@ public class BufferTest5 {
 
 	// position不能大于其limit
 	public static void test2() {
-
+		byte[] byteArray = new byte[] { 1, 2, 3 };
+		ByteBuffer byteBuffer = ByteBuffer.wrap(byteArray);
+		byteBuffer.limit(2);
+		try {
+			byteBuffer.position(3);
+		} catch (IllegalArgumentException e) {
+			e.printStackTrace();
+		}
 	}
 
 	// limit不能大于其capacity
 	public static void test3() {
-
+		byte[] byteArray = new byte[] { 1, 2, 3 };
+		ByteBuffer byteBuffer = ByteBuffer.wrap(byteArray);
+		try {
+			byteBuffer.limit(100);
+		} catch (IllegalArgumentException e) {
+			e.printStackTrace();
+		}
 	}
 
 	// 如果定义了mark，则在将position或limit调整小于该mark的值时，该mark被丢弃
@@ -59,9 +73,15 @@ public class BufferTest5 {
 
 	}
 
-	// 如果未定义了mark，那么调用reset会抛出InvalidaMarkException异常
+	// 如果未定义了mark，那么调用reset会抛出InvalidMarkException异常
 	public static void test5() {
-
+		byte[] byteArray = new byte[] { 1, 2, 3 };
+		ByteBuffer byteBuffer = ByteBuffer.wrap(byteArray);
+		try {
+			byteBuffer.reset();
+		} catch (InvalidMarkException e) {
+			e.printStackTrace();
+		}
 	}
 
 	// 如果position大于新的limit，则position的值就是新limit的值
