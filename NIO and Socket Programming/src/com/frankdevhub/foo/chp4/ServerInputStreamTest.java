@@ -13,7 +13,30 @@ import java.net.Socket;
  * @Copyright: 2019 www.frankdevhub.site Inc. All rights reserved.
  */
 public class ServerInputStreamTest {
-	public static void initServer() throws IOException {
+
+	protected class InitServerThread extends Thread {
+		@Override
+		public void run() {
+			try {
+				initServer();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+	protected class InitClientThread extends Thread {
+		@Override
+		public void run() {
+			try {
+				initClient();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+	private void initServer() throws IOException {
 		ServerSocket serverSocket = null;
 		Socket socket = null;
 		InputStream inputStream = null;
@@ -40,7 +63,7 @@ public class ServerInputStreamTest {
 		}
 	}
 
-	public static void initClient() throws IOException {
+	private void initClient() throws IOException {
 		Socket socket = null;
 		try {
 			System.out.println("socket begin time=" + System.currentTimeMillis());
@@ -58,8 +81,24 @@ public class ServerInputStreamTest {
 
 	}
 
+	// server socket accept begin=1573393108540
+	// socket begin time=1573393110529
+	// server socket accept end=1573393110550
+	// server socket inputstream read start=1573393110550
+	// socket end time=1573393110551
+
 	public static void main(String[] args) throws IOException {
-		initServer();
-		initClient();
+		ServerInputStreamTest test = new ServerInputStreamTest();
+		Thread threadA = test.new InitServerThread();
+		Thread threadB = test.new InitClientThread();
+		try {
+
+			threadA.start();
+			Thread.sleep(2000);
+			threadB.start();
+
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 	}
 }
