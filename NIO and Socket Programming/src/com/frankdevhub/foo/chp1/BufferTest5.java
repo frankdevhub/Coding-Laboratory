@@ -12,10 +12,33 @@ import java.nio.ByteBuffer;
 public class BufferTest5 {
 
 	// 缓冲区的capacity不能为负数，缓冲和区的limit不能为负数，缓冲区的position不能为负数
+	// capacity不能为负数
 	public static void test1() {
 		try {
 			@SuppressWarnings("unused")
 			ByteBuffer byteBuffer = ByteBuffer.allocate(-1);
+		} catch (IllegalArgumentException e) {
+			e.printStackTrace();
+		}
+	}
+
+	// limit不能为负数
+	public static void test1_1() {
+		byte[] byteArray = new byte[] { 1, 2, 3 };
+		ByteBuffer byteBuffer = ByteBuffer.wrap(byteArray);
+		try {
+			byteBuffer = (ByteBuffer) byteBuffer.limit(-1);
+		} catch (IllegalArgumentException e) {
+			e.printStackTrace();
+		}
+	}
+
+	// position不能为负数
+	public static void test1_2() {
+		byte[] byteArray = new byte[] { 1, 2, 3 };
+		ByteBuffer byteBuffer = ByteBuffer.wrap(byteArray);
+		try {
+			byteBuffer = (ByteBuffer) byteBuffer.position(-1);
 		} catch (IllegalArgumentException e) {
 			e.printStackTrace();
 		}
@@ -28,6 +51,7 @@ public class BufferTest5 {
 
 	// limit不能大于其capacity
 	public static void test3() {
+
 	}
 
 	// 如果定义了mark，则在将position或limit调整小于该mark的值时，该mark被丢弃
