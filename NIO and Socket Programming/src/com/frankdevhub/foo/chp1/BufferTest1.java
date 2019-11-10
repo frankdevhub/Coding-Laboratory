@@ -15,7 +15,7 @@ import java.nio.ShortBuffer;
  * @description: 包装数据与获得容量
  * @Copyright: 2019 www.frankdevhub.site Inc. All rights reserved.
  */
-public class Test1 {
+public class BufferTest1 {
 	public static void main(String[] args) {
 		byte[] byteArray = new byte[] { 1, 2, 3 };
 		short[] shortArray = new short[] { 1, 2, 3, 4 };
