@@ -74,6 +74,7 @@ public class BufferTest5 {
 	// 4.3 如果定义了mark，则在将limit调整为不小于该mark的值时，该mark不丢弃
 	// 4.4 如果定义了mark，则在将limit调整为小于该nark的值时，该mark被丢弃
 	public static void test4_1() {
+		// 4.1 如果定义了mark，则在将position调整为不小于该mark的值时，该mark不丢弃
 		byte[] byteArray = new byte[] { 1, 2, 3 };
 		ByteBuffer byteBuffer = ByteBuffer.wrap(byteArray);
 
@@ -85,6 +86,7 @@ public class BufferTest5 {
 		System.out.println("byte buffer return to position at position=" + byteBuffer.position());
 	}
 
+	// 4.2 如果定义了mark，则在将position调整为小于该mark的值时，该mark被丢弃
 	public static void test4_2() {
 		byte[] byteArray = new byte[] { 1, 2, 3 };
 		ByteBuffer byteBuffer = ByteBuffer.wrap(byteArray);
@@ -98,6 +100,7 @@ public class BufferTest5 {
 		}
 	}
 
+	// 4.3 如果定义了mark，则在将limit调整为不小于该mark的值时，该mark不丢弃
 	public static void test4_3() {
 		byte[] byteArray = new byte[] { 1, 2, 3 };
 		ByteBuffer byteBuffer = ByteBuffer.wrap(byteArray);
@@ -121,6 +124,8 @@ public class BufferTest5 {
 		System.out.println("D byteBuffer position=" + byteBuffer.position() + " limit=" + byteBuffer.limit());
 	}
 
+	
+	
 	// 5. 如果未定义了mark，那么调用reset会抛出InvalidMarkException异常
 	public static void test5() {
 		byte[] byteArray = new byte[] { 1, 2, 3 };
