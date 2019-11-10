@@ -12,7 +12,7 @@ import java.nio.InvalidMarkException;
  */
 public class BufferTest5 {
 
-	// 缓冲区的capacity不能为负数，缓冲和区的limit不能为负数，缓冲区的position不能为负数
+	// 1.缓冲区的capacity不能为负数，缓冲和区的limit不能为负数，缓冲区的position不能为负数
 	// capacity不能为负数
 	public static void test1() {
 		try {
@@ -23,7 +23,7 @@ public class BufferTest5 {
 		}
 	}
 
-	// limit不能为负数
+	// 1.1 limit不能为负数
 	public static void test1_1() {
 		byte[] byteArray = new byte[] { 1, 2, 3 };
 		ByteBuffer byteBuffer = ByteBuffer.wrap(byteArray);
@@ -34,7 +34,7 @@ public class BufferTest5 {
 		}
 	}
 
-	// position不能为负数
+	// 1.2 position不能为负数
 	public static void test1_2() {
 		byte[] byteArray = new byte[] { 1, 2, 3 };
 		ByteBuffer byteBuffer = ByteBuffer.wrap(byteArray);
@@ -45,7 +45,7 @@ public class BufferTest5 {
 		}
 	}
 
-	// position不能大于其limit
+	// 2. position不能大于其limit
 	public static void test2() {
 		byte[] byteArray = new byte[] { 1, 2, 3 };
 		ByteBuffer byteBuffer = ByteBuffer.wrap(byteArray);
@@ -57,7 +57,7 @@ public class BufferTest5 {
 		}
 	}
 
-	// limit不能大于其capacity
+	// 3. limit不能大于其capacity
 	public static void test3() {
 		byte[] byteArray = new byte[] { 1, 2, 3 };
 		ByteBuffer byteBuffer = ByteBuffer.wrap(byteArray);
@@ -68,12 +68,60 @@ public class BufferTest5 {
 		}
 	}
 
-	// 如果定义了mark，则在将position或limit调整小于该mark的值时，该mark被丢弃
-	public static void test4() {
+	// 4.如果定义了mark，则在将position或limit调整小于该mark的值时，该mark被丢弃
+	// 4.1 如果定义了mark，则在将position调整为不小于该mark的值时，该mark不丢弃
+	// 4.2 如果定义了mark，则在将position调整为小于该mark的值时，该mark被丢弃
+	// 4.3 如果定义了mark，则在将limit调整为不小于该mark的值时，该mark不丢弃
+	// 4.4 如果定义了mark，则在将limit调整为小于该nark的值时，该mark被丢弃
+	public static void test4_1() {
+		byte[] byteArray = new byte[] { 1, 2, 3 };
+		ByteBuffer byteBuffer = ByteBuffer.wrap(byteArray);
 
+		byteBuffer.position(1);
+		System.out.println("byte buffer set mark at position at position=" + byteBuffer.position());
+		byteBuffer.position(2);
+
+		byteBuffer.reset();
+		System.out.println("byte buffer return to position at position=" + byteBuffer.position());
 	}
 
-	// 如果未定义了mark，那么调用reset会抛出InvalidMarkException异常
+	public static void test4_2() {
+		byte[] byteArray = new byte[] { 1, 2, 3 };
+		ByteBuffer byteBuffer = ByteBuffer.wrap(byteArray);
+
+		byteBuffer.position(2);
+		byteBuffer.mark();
+		try {
+			byteBuffer.reset();
+		} catch (InvalidMarkException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static void test4_3() {
+		byte[] byteArray = new byte[] { 1, 2, 3 };
+		ByteBuffer byteBuffer = ByteBuffer.wrap(byteArray);
+
+		System.out.println("A byteBuffer position=" + byteBuffer.position() + " limit=" + byteBuffer.limit());
+		System.out.println();
+
+		byteBuffer.position(2);
+		byteBuffer.mark();
+
+		System.out.println("B byteBuffer position=" + byteBuffer.position() + " limit=" + byteBuffer.limit());
+		System.out.println();
+
+		byteBuffer.position(3);
+		byteBuffer.limit(3);
+
+		System.out.println("C byteBuffer position=" + byteBuffer.position() + " limit=" + byteBuffer.limit());
+		System.out.println();
+
+		byteBuffer.reset();
+		System.out.println("D byteBuffer position=" + byteBuffer.position() + " limit=" + byteBuffer.limit());
+	}
+
+	// 5. 如果未定义了mark，那么调用reset会抛出InvalidMarkException异常
 	public static void test5() {
 		byte[] byteArray = new byte[] { 1, 2, 3 };
 		ByteBuffer byteBuffer = ByteBuffer.wrap(byteArray);
@@ -84,12 +132,12 @@ public class BufferTest5 {
 		}
 	}
 
-	// 如果position大于新的limit，则position的值就是新limit的值
+	// 6. 如果position大于新的limit，则position的值就是新limit的值
 	public static void test6() {
 
 	}
 
-	// 当position和limit值一样时，在指定的position写入数据会出现异常，因为此位置是被限制的
+	// 7. 当position和limit值一样时，在指定的position写入数据会出现异常，因为此位置是被限制的
 	public static void test7() {
 
 	}
