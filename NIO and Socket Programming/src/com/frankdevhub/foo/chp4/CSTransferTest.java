@@ -190,8 +190,8 @@ public class CSTransferTest {
 	public static void main(String[] args) {
 
 		CSTransferTest test = new CSTransferTest();
-		Thread threadA = test.new ServerThread();
-		Thread threadB = test.new ClientThread();
+		ServerThread threadA = test.new ServerThread();
+		ClientThread threadB = test.new ClientThread();
 
 		threadA.start();
 		threadB.start();
