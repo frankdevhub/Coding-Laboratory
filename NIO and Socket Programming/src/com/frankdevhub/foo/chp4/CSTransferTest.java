@@ -17,9 +17,6 @@ import java.util.concurrent.locks.ReentrantLock;
  * @Copyright: 2019 www.frankdevhub.site Inc. All rights reserved.
  */
 public class CSTransferTest {
-
-	private ReentrantLock lock = new ReentrantLock();
-
 	protected class ServerThread extends Thread {
 		@Override
 		public void run() {
@@ -43,7 +40,6 @@ public class CSTransferTest {
 	}
 
 	private void doServerBusiness() throws IOException {
-		lock.lock();
 		System.out.println("do server business");
 		ServerSocket serverSocket = null;
 		Socket socket = null;
@@ -53,7 +49,6 @@ public class CSTransferTest {
 		ObjectOutputStream objectOutputStream = null;
 		try {
 			serverSocket = new ServerSocket(8090);
-			lock.unlock();
 			socket = serverSocket.accept();
 
 			// 输入开始
@@ -72,7 +67,7 @@ public class CSTransferTest {
 			String strB = "client hello B\n";
 			String strC = "client hello C\n";
 
-			objectOutputStream = new ObjectOutputStream(objectOutputStream);
+			objectOutputStream = new ObjectOutputStream(outputStream);
 			int allStrByteLength = (strA + strB + strC).getBytes().length;
 			objectOutputStream.writeInt(allStrByteLength);
 			objectOutputStream.flush();
@@ -84,7 +79,9 @@ public class CSTransferTest {
 			// 输出结束
 
 			// 输入开始
-			byteLength = objectInputStream.readInt();
+			byteLength = objectInputStream.readInt(); 
+			//java.io.StreamCorruptedException: invalid type code: AC
+			
 			byteArray = new byte[byteLength];
 			objectInputStream.readFully(byteArray);
 			newString = new String(byteArray);
@@ -96,7 +93,7 @@ public class CSTransferTest {
 			strB = "client hello E\n";
 			strC = "client hello F\n";
 
-			objectOutputStream = new ObjectOutputStream(objectOutputStream);
+			objectOutputStream = new ObjectOutputStream(outputStream);
 			allStrByteLength = (strA + strB + strC).getBytes().length;
 			objectOutputStream.writeInt(allStrByteLength);
 			objectOutputStream.flush();
@@ -124,16 +121,15 @@ public class CSTransferTest {
 		ObjectInputStream objectInputStream = null;
 		ObjectOutputStream objectOutputStream = null;
 		try {
-			lock.lock();
 			socket = new Socket("localhost", 8090);
-			lock.unlock();
+
 			// 输出开始
 			outputStream = socket.getOutputStream();
 			String strA = "server hello A\n";
 			String strB = "server hello B\n";
 			String strC = "server hello C\n";
 
-			objectOutputStream = new ObjectOutputStream(objectOutputStream);
+			objectOutputStream = new ObjectOutputStream(outputStream);
 			int allStrByteLength = (strA + strB + strC).getBytes().length;
 			objectOutputStream.writeInt(allStrByteLength);
 			objectOutputStream.flush();
@@ -159,7 +155,7 @@ public class CSTransferTest {
 			strB = "server hello E\n";
 			strC = "server hello F\n";
 
-			objectOutputStream = new ObjectOutputStream(objectOutputStream);
+			objectOutputStream = new ObjectOutputStream(outputStream);
 			allStrByteLength = (strA + strB + strC).getBytes().length;
 			objectOutputStream.writeInt(allStrByteLength);
 			objectOutputStream.flush();
