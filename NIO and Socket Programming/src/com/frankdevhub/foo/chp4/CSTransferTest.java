@@ -7,6 +7,7 @@ import java.io.ObjectOutputStream;
 import java.io.OutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @ClassName: CSTransferTest
@@ -16,6 +17,8 @@ import java.net.Socket;
  * @Copyright: 2019 www.frankdevhub.site Inc. All rights reserved.
  */
 public class CSTransferTest {
+
+	private ReentrantLock lock = new ReentrantLock();
 
 	protected class ServerThread extends Thread {
 		@Override
@@ -40,6 +43,8 @@ public class CSTransferTest {
 	}
 
 	private void doServerBusiness() throws IOException {
+		lock.lock();
+		System.out.println("do server business");
 		ServerSocket serverSocket = null;
 		Socket socket = null;
 		InputStream inputStream = null;
@@ -48,13 +53,11 @@ public class CSTransferTest {
 		ObjectOutputStream objectOutputStream = null;
 		try {
 			serverSocket = new ServerSocket(8090);
+			lock.unlock();
 			socket = serverSocket.accept();
-
-			System.out.println(socket == null);
 
 			// 输入开始
 			inputStream = socket.getInputStream();
-			System.out.println(inputStream == null);
 			objectInputStream = new ObjectInputStream(inputStream);
 			int byteLength = objectInputStream.readInt();
 			byte[] byteArray = new byte[byteLength];
@@ -114,14 +117,16 @@ public class CSTransferTest {
 	}
 
 	private void doClientBusiness() throws IOException {
+		System.out.println("do client business");
 		Socket socket = null;
 		InputStream inputStream = null;
 		OutputStream outputStream = null;
 		ObjectInputStream objectInputStream = null;
 		ObjectOutputStream objectOutputStream = null;
 		try {
+			lock.lock();
 			socket = new Socket("localhost", 8090);
-
+			lock.unlock();
 			// 输出开始
 			outputStream = socket.getOutputStream();
 			String strA = "server hello A\n";
