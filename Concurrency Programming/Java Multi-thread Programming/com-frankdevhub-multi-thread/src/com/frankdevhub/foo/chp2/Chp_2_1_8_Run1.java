@@ -41,6 +41,16 @@ public class Chp_2_1_8_Run1 {
 		}
 	}
 
+	// begin task
+	// do long task return value 1 threadName=Thread-0
+	// do long task return value 1 threadName=Thread-0
+	// end task
+	// begin task
+	// do long task return value 1 threadName=Thread-1
+	// do long task return value 1 threadName=Thread-1
+	// end task
+	// cost time: 6 sec
+
 	public static void main(String[] args) {
 		try {
 			Chp_2_1_8_Run1 run = new Chp_2_1_8_Run1();
