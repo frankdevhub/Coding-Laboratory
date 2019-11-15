@@ -7,7 +7,7 @@ package com.frankdevhub.foo.chp2;
  * @description: 多线程的死锁
  * @Copyright: 2019 www.frankdevhub.site Inc. All rights reserved.
  */
-public class Chp_2_2_11_DeadLockTest {
+public class Chp_2_2_12_DeadLockTest {
 
 	protected class DeadThread implements Runnable {
 		private String username;
