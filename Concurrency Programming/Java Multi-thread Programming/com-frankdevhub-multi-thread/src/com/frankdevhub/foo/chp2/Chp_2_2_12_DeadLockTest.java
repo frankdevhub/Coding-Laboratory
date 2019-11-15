@@ -60,7 +60,7 @@ public class Chp_2_2_12_DeadLockTest {
 
 	public static void main(String[] args) {
 		try {
-			Chp_2_2_11_DeadLockTest deadLockTest = new Chp_2_2_11_DeadLockTest();
+			Chp_2_2_12_DeadLockTest deadLockTest = new Chp_2_2_12_DeadLockTest();
 			DeadThread deadLockThread = deadLockTest.new DeadThread();
 			Thread t1 = new Thread(deadLockThread);
 			Thread t2 = new Thread(deadLockThread);
