@@ -10,6 +10,9 @@ package com.frankdevhub.foo.chp2;
 public class Chp_2_3_3_RunThreadTest {
 
 	protected class RunThread extends Thread {
+		// 此处应使用volatile使得公有与私有的数据栈数据同步
+		// volatile private boolean isRunning = true;
+
 		private boolean isRunning = true;
 
 		public void setRunning(boolean isRunning) {
