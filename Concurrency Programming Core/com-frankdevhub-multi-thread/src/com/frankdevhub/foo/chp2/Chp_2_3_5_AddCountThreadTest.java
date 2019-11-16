@@ -48,8 +48,7 @@ public class Chp_2_3_5_AddCountThreadTest {
 		Thread t5 = new Thread(addCountThread);
 		t5.setName("thread-E");
 
-		t1.start();
-		t2.start();
+		t1.start(); 
 		t3.start();
 		t4.start();
 		t5.start();
