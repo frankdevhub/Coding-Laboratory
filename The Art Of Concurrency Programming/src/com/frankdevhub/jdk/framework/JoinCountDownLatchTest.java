@@ -13,6 +13,12 @@ public class JoinCountDownLatchTest {
 	// parser2 thread finish
 	// parser1 thread finish
 
+	// OR:
+
+	// parser1 thread finish
+	// parser2 thread finish
+	// all parser finish
+
 	public static void main(String[] args) throws InterruptedException {
 		Thread parser1 = new Thread(new Runnable() {
 			@Override
