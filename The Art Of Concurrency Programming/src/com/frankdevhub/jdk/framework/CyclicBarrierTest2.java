@@ -38,9 +38,9 @@ public class CyclicBarrierTest2 {
 			public void run() {
 				try {
 					cyclicBarrier.await();
+					//System.out.println("threadName=" + Thread.currentThread().getName() + " " + 1);
 				} catch (InterruptedException | BrokenBarrierException e) {
 					e.printStackTrace();
-
 				}
 				System.out.println("threadName=" + Thread.currentThread().getName() + " " + 1);
 			}
