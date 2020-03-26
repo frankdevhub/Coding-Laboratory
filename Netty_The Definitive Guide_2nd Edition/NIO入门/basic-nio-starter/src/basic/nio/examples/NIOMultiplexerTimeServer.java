@@ -11,8 +11,6 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.Set;
 
-import javax.swing.plaf.SliderUI;
-
 public class NIOMultiplexerTimeServer implements Runnable {
 
 	private Selector selector;
